@@ -5,7 +5,7 @@
 //starts or controller function
 function getValues(){
     //get values from the page
-    let startValue = document.getElementById("startValue")
+    let startValue = document.getElementById("startValue");
 
 
     //we need to call generateNumbers
