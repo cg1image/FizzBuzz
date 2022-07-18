@@ -1,7 +1,7 @@
 :root{  /* :root can be useful for declaring global CSS variables: (in this case, global colors).
     */
-    --primary-color: #8097a8;
-    --secondary-color: #cbb26a;
+    --primary-color: #5499b8;
+    --secondary-color: #abab19;
     --dark-color: #000000;
     --white-color: #e5d9b6;
     --lighter-color: #f3f3f3;
@@ -18,11 +18,11 @@ body{
 }
 
 nav{
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
 }
 
 footer{
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -40,7 +40,7 @@ footer .social>a{
 
 footer .social>a:hover{
     opacity: .9;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .bsicon{
