@@ -80,15 +80,15 @@
                     <h4>Enter value</h4>
                     <form class="row">
                             <div class="col-6">
-                                <input type="number" class="form-control" id="startValue" value="0"
-                                    placeholder="Enter starting number" aria-label="Start Value">
+                                <input id="fizzValue" type="number" class="form-control"  value=3
+                                    placeholder="Fizz" aria-label="Fizz Value">
                             </div>
                             <div class="col-6">
-                                <input type="number" class="form-control" id="endvalue" value="100"
-                                    placeholder="Enter ending number" aria-label="End Value">
+                                <input id="buzzValue" type="number" class="form-control"  value=5
+                                    placeholder="Buzz" aria-label="Buzz Value">
                             </div>
                             <div class="col d-flex justify-content-end gy-3">
-                                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Buzz</button>
+                                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">FizzBuzz</button>
                             </div>  
                     </form>
                     <h2 class="border-bottom mt-5 ">Results</h2>
@@ -131,11 +131,26 @@
             </div>
         </div>
     </footer>
+
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click",getValues);
+    </script>
 </body>
 
 </html>
