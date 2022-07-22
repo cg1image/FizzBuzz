@@ -2,13 +2,13 @@
 function getValues(){
 
     //get the user values from the page
-    let fizzValue = document.getElementById(fizzValue).value;
-    let buzzValue = document.getElementById(buzzValue).value;
+    let fizzValue = document.getElementById("fizzValue").value;
+    let buzzValue = document.getElementById("buzzValue").value;
     //check to make sure they're numbers
     fizzValue = parseInt(fizzValue);
     buzzValue = parseInt(buzzValue);
     //check that the numbers are integers
-    if (Numbers.isInteger(fizzValue) && Numbers.isInteger(buzzValue)){
+    if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)){
         
         //call fizzBuzz
         let fbArray = fizzBuzz(fizzValue,buzzValue);
@@ -57,10 +57,37 @@ function fizzBuzz(fizzValue,buzzValue){
     return returnArray;
 }
 
+
+//loop over the array and create a table row for each ite
 function displayData(fbArray){
 
-    //loop over the array and create a table row for each item
+    //get the table body  element from the page
+    let tableBody = document.getElementById("results");
 
-    //add all the rows to the table
+    //get the template row
+    let templateRow = document.getElementById("fbTemplate");
 
+    //clear table first
+    tableBody.innerHTML = "";
+
+    for (let index = 0; index < fbArray.length; index += 10) {
+        let tableRow = document.importNode(templateRow.content,true);
+
+        //grab just the "td" and put into array
+        let rowCols = tableRow.querySelectorAll("td");
+        rowCols[0].textContent = fbArray[index];
+        rowCols[1].textContent = fbArray[index+1];
+        rowCols[2].textContent = fbArray[index+2];
+        rowCols[3].textContent = fbArray[index+3];
+        rowCols[4].textContent = fbArray[index+4];
+        rowCols[5].textContent = fbArray[index+5];
+        rowCols[6].textContent = fbArray[index+6];
+        rowCols[7].textContent = fbArray[index+7];
+        rowCols[8].textContent = fbArray[index+8];
+        rowCols[9].textContent = fbArray[index+9];
+
+        tableBody.appendChild(tableRow);
+
+        //add all the row to the table
+    }    
 }
