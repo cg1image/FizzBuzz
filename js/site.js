@@ -1,4 +1,4 @@
-//get values from the user. fizzValue and buzzValue
+//
 function getValues(){
 
     //get the user values from the page
@@ -58,7 +58,7 @@ function fizzBuzz(fizzValue,buzzValue){
 }
 
 
-//loop over the array and create a table row for each ite
+//loop over the array and create a table row for each item
 function displayData(fbArray){
 
     //get the table body  element from the page
@@ -75,19 +75,46 @@ function displayData(fbArray){
 
         //grab just the "td" and put into array
         let rowCols = tableRow.querySelectorAll("td");
+
+        rowCols[0].classList.add(fbArray[index]);
         rowCols[0].textContent = fbArray[index];
+
+        rowCols[1].classList.add(fbArray[index+1]);
         rowCols[1].textContent = fbArray[index+1];
+
+        rowCols[2].classList.add(fbArray[index+2]);
         rowCols[2].textContent = fbArray[index+2];
+
+        rowCols[3].classList.add(fbArray[index+3]);
         rowCols[3].textContent = fbArray[index+3];
+
+        rowCols[4].classList.add(fbArray[index+4]);
         rowCols[4].textContent = fbArray[index+4];
+
+        rowCols[5].classList.add(fbArray[index+5]);
         rowCols[5].textContent = fbArray[index+5];
+
+        rowCols[6].classList.add(fbArray[index+6]);
         rowCols[6].textContent = fbArray[index+6];
+
+        rowCols[7].classList.add(fbArray[index+7]);
         rowCols[7].textContent = fbArray[index+7];
+
+        rowCols[8].classList.add(fbArray[index+8]);
         rowCols[8].textContent = fbArray[index+8];
+
+        rowCols[9].classList.add(fbArray[index+9]);
         rowCols[9].textContent = fbArray[index+9];
 
         tableBody.appendChild(tableRow);
 
         //add all the row to the table
     }    
+}
+
+function btnReset(){
+    let tableBody = document.getElementById("results"); 
+    tableBody.innerHTML = "";
+    
+
 }
