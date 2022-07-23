@@ -143,9 +143,10 @@
 
                     <h5>if else statement</h5>
                     <p>Creates a condition if divisible by both 3 and 5, divisible by 3 or divisible by 5 then push the
-                        words FizzBuzz, Fizz, or Buzz to the array instead of numbers otherwise just push numbers to the array.</p>
+                        words FizzBuzz, Fizz, or Buzz to the array instead of numbers otherwise just push numbers to the
+                        array.</p>
 
-                    
+
                 </div>
 
             </div>
@@ -165,7 +166,7 @@ function displayData(fbArray){
     //clear table first
     tableBody.innerHTML =  "";
 
-    for (let index = 0; index < fbArray.length; index += 5) {
+    for (let index = 0; index < fbArray.length; index += 10) {
         
         let tableRow = document.importNode(templateRow.content, true);
 
@@ -197,13 +198,18 @@ function displayData(fbArray){
                 </div>
                 <div class="col-lg-4 logoFont">
                     <p>View or Display Function</p>
-                    <h5></h5>
-                    <p></p>
+                    <h5>Declaring a few variables</h5>
+                    <p>tableBody, templateRow, rowCols are variables assigned to certain areas on the DOM</p>
 
-                    <h5></h5>
-                    <p></p>
+                    <h5>for loop</h5>
+                    <p>Loops over the existing iteration loop. This time defined by the array length and incremented by
+                        10. This loops is associated with the importNode attribute which is assigned to the temporary
+                        table data implanted on the page.</p>
 
-                    
+                    <h5>rowCols variable</h5>
+                    <p>Grabs all the current table data contents and displays it to the table body section on the page. </p>
+
+
                 </div>
 
             </div>
